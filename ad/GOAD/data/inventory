@@ -7,7 +7,7 @@ domain_name=GOAD
 admin_user=administrator
 
 ; global settings inventory default value
-keyboard_layouts=["en-US", "da-DK", "fr-FR"]
+keyboard_layouts=["en-US"]
 
 ; modify this to add a default route
 add_route=no
@@ -51,6 +51,7 @@ dc02
 dc03
 srv02
 srv03
+ws01
 
 ; domain controler (mandatory)
 ; usage : ad-acl.yml, ad-data.yml, ad-relations.yml, laps.yml
@@ -68,6 +69,7 @@ srv03
 ; workstation to enroll (mandatory if you want workstation)
 ; usage : ad-servers.yml, laps.yml
 [workstation]
+ws01
 
 ; parent domain controler (mandatory)
 ; usage : ad-servers.yml
@@ -140,15 +142,17 @@ srv03
 ; allow defender
 ; usage : security.yml
 [defender_on]
-dc01
-dc02
-dc03
-srv03
+
 
 ; disable defender
 ; usage : security.yml
 [defender_off]
 srv02
+dc01
+dc02
+dc03
+srv03
+ws01
 
 ;stay empty until override
 [extensions]

@@ -115,11 +115,12 @@ srv03
 ; allow defender (dc or server only)
 ; usage : security.yml
 [defender_on]
+
+; disable defender (dc or server only)
+; usage : security.yml
+[defender_off]
 dc01
 dc02
 srv01
 srv02
 srv03
-; disable defender (dc or server only)
-; usage : security.yml
-[defender_off]

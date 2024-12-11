@@ -12,7 +12,7 @@ class WslCommand(Command):
     def __init__(self):
         super().__init__()
         self.vagrant_bin = 'vagrant.exe'
-        self.terraform_bin = 'terraform.exe'
+        self.terraform_bin = 'terraform'
 
     def file_exist(self, file):
         exist = os.path.isfile(file)
@@ -35,7 +35,7 @@ class WslCommand(Command):
         return self.file_exist("/mnt/c/Program Files/Oracle/VirtualBox/VBoxManage.exe")
 
     def check_terraform(self):
-        return self.is_in_path('terraform.exe')
+        return self.is_in_path('terraform')
 
     def check_ludus(self):
         return False
